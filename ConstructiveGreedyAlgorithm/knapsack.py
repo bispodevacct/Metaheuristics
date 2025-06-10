@@ -2,6 +2,8 @@ import random
 import time as t
 import math
 
+import os
+
 # Criação da classe Mochila, a manipulação dos espaços será feita nos métodos da classe
 class Knapsack:
     def __init__(self, capacity):   # Para instanciar uma mochila, precisamos apenas da capacidade dela
@@ -30,6 +32,8 @@ class Knapsack:
                     best = s0.copy()
             
             temp *= coolingRate
+
+            print(s0Profit)
         
         self.selectedItems = best.copy()
     
@@ -61,7 +65,6 @@ class Knapsack:
         newSolution = solution.copy()
 
         item = random.randint(0, len(newSolution) - 1) # A escolha do item é feita de maneira aleatória dentro do tamanho da solução original
-        print(f'item: {item}')
 
         if newSolution[item] == 0:
             newSolution[item] = 1

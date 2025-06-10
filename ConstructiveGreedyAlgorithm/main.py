@@ -16,9 +16,9 @@ with open("items.txt", "r") as f:
 
 knapsack = k.Knapsack(knapsackCapacity)
 # knapsack.calculate(profits, weights)
-knapsack.simulatedAnnealing(profits, weights, 60, 100, 0.99)
+knapsack.simulatedAnnealing(profits, weights, 10, 100, 0.99)
 
-print(f'Items: {knapsack.getItems()}')
+""" print(f'Items: {knapsack.getItems()}')
 print(f'Selected items: {knapsack.getSelectedItems()}')
 print(f'Knapsack profit: {knapsack.getKnapsackProfit()}')
-print(f'Knapsack weight: {knapsack.getKnapsackWeight()}')
+print(f'Knapsack weight: {knapsack.getKnapsackWeight()}') """
